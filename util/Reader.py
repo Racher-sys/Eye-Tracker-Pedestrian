@@ -183,10 +183,10 @@ def read_sample3(filename):
             continue
         if 'MSG' in line[1]:
             msg = line[3][11:]
-            if 'sti' in msg :
+            if 'sti' in msg:
                 flag = 1
                 count += 1
-            else :
+            else:
                 flag = 0
 
         if 'SMP' in line[1] and flag == 1:
@@ -248,7 +248,7 @@ def sample_dis(file):
         columns=['Location X', 'Location Y', 'Duration', 'Image Path', 'Avg Pupil L', 'Avg Pupil R', 'Mark'], index=[])
     dat = {'Location X': 0, 'Location Y': 0, 'Duration': 0, 'Image Path': 0, 'Avg Pupil L': 0, 'Avg Pupil R': 0,
            'Mark': 0}
-    data = read_sample2(file)
+    data = read_sample3(file)
     tmp = 0
     F = []
     df_count = 0

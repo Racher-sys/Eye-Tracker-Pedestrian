@@ -21,6 +21,7 @@ def genterate_aoi(fixData, threshod):
     M2 = []
     feature = []
     feature1 = []
+    feature2 = []
     # 找到最后一个点出现在哪个区域
     last = 0
     for i in range(length):
@@ -50,9 +51,10 @@ def genterate_aoi(fixData, threshod):
             feature.append([x, y, total_duration, max_duration, mean_duration, std_duration, count_fixation])
 
             feature1.append([x, y, last, count_fixation])
+            feature2.append([x, y])
             # feature.append([x, y, total_duration, max_duration, mean_duration, count_duration])
 
-    return feature1
+    return feature2
 
 
 def genterate_aoi_dul(fixDatas, threshod):
